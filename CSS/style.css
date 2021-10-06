@@ -458,25 +458,6 @@ footer
     padding: 24px 0;
     transition: all 0.1s ease-in;
 }
-@media (max-width: 897px)
-{
-    .menu_footer button:nth-child(6)
-    {
-        padding: 15px 0;
-    }
-}
-@media (max-width: 640px)
-{
-    .menu_footer button
-    {
-        font-size: 12px;
-        padding: 25px 0;
-    }
-    .menu_footer button:nth-child(6)
-    {
-        padding: 18px 0;
-    }
-}
 .menu_footer button:hover
 {
     background-color: white;
@@ -529,6 +510,13 @@ footer
     padding: 25px 0;
     text-align: center;
 }
+@media (max-width: 897px)
+{
+    .menu_footer button:nth-child(6)
+    {
+        padding: 15px 0;
+    }
+}
 @media (max-width: 803px)
 {
     .menu_contact
@@ -551,5 +539,66 @@ footer
     {
         width: 18px;
         height: 18px;
+    }
+}
+@media (max-width: 640px)
+{
+    .menu_footer button
+    {
+        font-size: 12px;
+        padding: 25px 0;
+    }
+    .menu_footer button:nth-child(6)
+    {
+        padding: 18px 0;
+    }
+}
+@media (max-width: 550px)
+{
+    .main_wrapper p
+    {
+        font-size: 8px;
+    }
+    .main_wrapper h1
+    {
+        font-size: 22px;
+    }
+    table .column1
+    {
+        font-size: 12px;
+    }
+    table .column2
+    {
+        font-size: 10px;
+    }
+    .main_wrapper button
+    {
+        font-size: 10px;
+        width: 200px;
+        padding: 10px 30px;
+    }
+    .decoration-row h1
+    {
+        font-size: 22px;
+    }
+    .registration-main p
+    {
+        font-size: 12px;
+    }
+    .registration-form input
+    {
+        width: 10px;
+        height: 30px;
+        margin: 2% 3%;
+    }
+    .registration-form .space
+    {
+        width: 90%;
+    }
+    .registration-main button
+    {
+        width: 240px;
+        height: 40px;
+        font-size: 12px;
     }
 }

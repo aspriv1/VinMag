@@ -715,6 +715,13 @@ footer
         padding: 20px 0;
     }
 }
+@media (max-width: 661px)
+{
+    .left_block h1
+    {
+        font-size: 28px;
+    }
+}
 @media (max-width: 640px)
 {
     .contacts
@@ -749,7 +756,7 @@ footer
     }
     .left_block h1
     {
-        font-size: 23px;
+        font-size: 24px;
     }
     .left_block p
     {

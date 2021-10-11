@@ -43,6 +43,7 @@ header{
 }
 .contacts
 {
+    font-size: 14px;
     color: white;
     width: 100%;
     display: flex;
@@ -58,6 +59,7 @@ header{
 }
 .menu_wrapper button
 {
+    text-align: center;
     color: white;
     border: 1px solid #FFFFFF;
     font-size: 14px;
@@ -118,47 +120,53 @@ button:active, button:focus
 {
     background-color:#282828;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 .tekst_wrapper
 {
     color: white;
     border: 1px solid white;
     text-align: center;
+    max-width: 1100px;
+    width: 100%;
+    height: 650px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin: 10% 0;
-    margin-left: 5%;
-    margin-right: 5%;
-    width: auto;
-}
-.tekst_wrapper img{
-    max-width: 200px;
-    width: 100%;
+    margin: 10% 5%;
 }
 .tekst_wrapper h1
 {
     font-size: 36px;
     font-weight: 600;
     font-family: 'Playfair Display', serif;
-    margin: 60px 2%;
+    margin-top: 5%;
 }
-.tekst_wrapper .subtitle
+.tekst_wrapper hr
 {
     background-color: #FFFFFF;
     size: 1px;
     width: 160px;
 }
-.lorem
+.tekst_wrapper p
 {
-    margin: 50px 20%;
+    width: 60%;
+    font-size: 16px;
 }
-/* conteiner3 */
+.tekst_wrapper img
+{
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 5%;
+}
+
+/* left_block */
+.left_block
+{
+    height: auto;
+    width: 80%;
+}
 .background_wrapper
 {
     display: flex;
@@ -177,21 +185,21 @@ button:active, button:focus
     grid-template-columns: 50% 50%;
     padding: 40px 0 60px 0;
 }
-.main_wrapper p
+.left_block p
 {
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;
     padding: 30px 0;
 }
-.main_wrapper h1
+.left_block h1
 {
     font-size: 36px;
     font-weight: 700;
     line-height: 54px;
     font-family: 'Playfair Display', serif;
 }
-.main_wrapper hr
+.left_block hr
 {
     size: 1px;
     width: 160px;
@@ -232,7 +240,7 @@ table .str2
     border-top: hidden;
     padding-bottom: 10px;
 }
-.main_wrapper button
+.left_block button
 {
     color: white;
     border: unset;
@@ -241,33 +249,31 @@ table .str2
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
-    width: 265px;
-    padding: 15px 30px;
+    width: 60%;
+    height: 55px;
     font-family: 'Montserrat', sans-serif;
     transition: all 0.1s ease-in;
 }
-.main_wrapper button:hover
+.left_block button:hover
 {
     letter-spacing: 0.09em;
     background-color: #bba13b;
 }
-.left_block
-{
-    height: auto;
-    width: 80%;
-}
+
 /* right_block */
 
 .right_block
 {
     width: 100%;
     display: grid;
-    justify-content: center;
-    align-items: center;
     grid-template-areas:  
     "img1 img1"
     "img2 img3";
     column-gap: 20px;
+}
+.right_block img
+{
+    width: 100%;
 }
 .img1
 {
@@ -275,22 +281,16 @@ table .str2
     padding-bottom: 30px;
     grid-area: img1;
     max-width: 540px;
-    width: 100%;
 }
 .img2
 {
     grid-area: img2;
-    width: 100%;
+    align-self: flex-end;
 }
 .img3
 {
     grid-area: img3;
-    width: 100%;
-}
-
-.right_block img
-{
-    width: 100%;
+    align-self: flex-end;
 }
 
 /* registration */
@@ -298,8 +298,7 @@ table .str2
 {
     background-color: #282828;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 .registration-main
 {
@@ -308,10 +307,9 @@ table .str2
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    margin: 10% 0;
-    height: 100vh;
-    width: 90%;
+    margin: 10% 10%;
+    max-width: 1100px;
+    height: 550px;
 }
 .registration-main hr
 {
@@ -319,24 +317,28 @@ table .str2
 }
 .registration-main p
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
     color: white;
     padding: 40px 0;
-    width: 70%;
-    margin-top: 60px;
+    width: 49%;
 }
 .registration-form
 {
-    text-align: center;
-    margin: 5% 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30px 30px 90px;
+    column-gap: 40px;
+    row-gap: 15px;
     width: 50%;
 }
 .registration-form input
 {
     background-color: unset;
-    width: 100%;
     height: 30px;
-    margin: 2% 3%;
     border-top: unset;
     border-left: unset;
     border-right: unset;
@@ -351,14 +353,15 @@ table .str2
 .registration-form .space
 {
     width: 100%;
+    grid-column: 1 / 3;
 }
 .registration-form input:active, input:focus 
 {
     outline: none;
 }
-.registration-main button
+.registration-form button
 {
-    width: 60%;
+    grid-column: 1 / 3;
     height: 50px;
     background-color: unset;
     text-transform: uppercase;
@@ -368,27 +371,28 @@ table .str2
     font-weight: bold;
     transition: all 0.1s ease-in;
 }
-.registration-main button:hover
+.registration-form button:hover
 {
     background-color: white;
     color: black;
     border: hidden;
     font-weight: bolder;
 }
-.registration-main button:active
+.registration-form button:active
 {
     font-size: 14px;
     background-color: rgb(209, 209, 209);
 }
+
 .decoration-row
 {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
     position: absolute;
-    margin-top: 1%;
+    padding-bottom: 550px;
+    width: 1200px;
+    max-width: 100%;
 }
 .decoration-row h1
 {
@@ -397,19 +401,21 @@ table .str2
     color: white;
     font-family: 'Playfair Display', serif;
     background-color: #282828;
-    width: 50%;
+    width: 40%;
 }
 .vinograd
 {
     /*transform: translate(0, 45%);*/
     width: 20%;
     max-width: 260px;
+    margin-left: 20px;
 }
 .bochka
 {
     /*transform: translate(0, 50%);*/
     width: 20%;
     max-width: 260px;
+    margin-right: 30px;
 }
 /* footer */
 footer
@@ -493,7 +499,6 @@ footer
     justify-content: center;
     width: 260px;
     padding: 25px 0;
-    border-right: 1px solid white;
 }
 .social img
 {
@@ -509,96 +514,416 @@ footer
     width: 265px;
     padding: 25px 0;
     text-align: center;
+    border-left: 1px solid white;
 }
 @media (max-width: 897px)
 {
-    .menu_footer button:nth-child(6)
+    .map_wrapper button
     {
-        padding: 15px 0;
+        font-size: 14px;
+        height: 45px;
     }
-}
-@media (max-width: 803px)
-{
+    .map_wrapper button:hover
+    {
+        font-size: 16px;
+    }
+    .tekst_wrapper h1
+    {
+        font-size: 32px;
+    }
+    .tekst_wrapper p
+    {
+        font-size: 14px;
+    }
+    .tekst_wrapper img
+    {
+        height: 160px;
+    }
+    .left_block h1
+    {
+        font-size: 32px;
+    }
+    .left_block p
+    {
+        font-size: 14px;
+    }
+    table .column1
+    {
+        font-size: 16px;
+    }
+    table .str1
+    {
+        font-size: 16px;
+    }
+    table .str2
+    {
+        font-size: 14px;
+    }
+    .left_block button
+    {
+        height: 35px;
+        font-size: 12px;
+    }
+    .decoration-row h1
+    {
+        font-size: 30px;
+    }
+    .registration-main p
+    {
+        font-size: 14px;
+    }
+    .registration-form input::placeholder
+    {
+        font-size: 14px;
+    }
+    .registration-form button
+    {
+        font-size: 14px;
+    }
     .menu_contact
     {
-        font-size: 13px;
+        font-size: 12px;
+        height: 60px;
+    }
+    .menu_footer button
+    {
+        font-size: 12px;
+        padding: 25px 0;
+    }
+    .name_magazine
+    {
+        padding: 25px 0;
+    }
+    .number_magazin
+    {
+        padding: 25px 0;
     }
     .social img
     {
         width: 20px;
         height: 20px;
     }
+    .affilation
+    {
+        padding: 25px 0;
+    }
+}
+@media (max-width: 753px)
+{
+    .left_block button
+    {
+        font-size: 10px;
+    }
 }
 @media (max-width: 729px)
 {
-    .menu_contact
+    .contacts
     {
         font-size: 12px;
+    }
+    .menu_wrapper button
+    {
+        font-size: 12px;
+        height: 45px;
+    }    
+    .map_wrapper button
+    {
+        font-size: 12px;
+        height: 45px;
+    }
+    .map_wrapper button:hover
+    {
+        font-size: 14px;
+    }
+    .tekst_wrapper h1
+    {
+        font-size: 30px;
+    }
+    .tekst_wrapper p
+    {
+        font-size: 12px;
+    }
+    .tekst_wrapper img
+    {
+        height: 120px;
+    }
+    .left_block h1
+    {
+        font-size: 30px;
+    }
+    .left_block p
+    {
+        font-size: 12px;
+    }
+    table .column1
+    {
+        font-size: 14px;
+    }
+    table .str1
+    {
+        font-size: 14px;
+    }
+    table .str2
+    {
+        font-size: 12px;
+    }
+    .left_block button
+    {
+        font-size: 10px;
+    }
+    .decoration-row h1
+    {
+        font-size: 25px;
+    }
+    .registration-main p
+    {
+        font-size: 12px;
+    }
+    .registration-form input::placeholder
+    {
+        font-size: 12px;
+    }
+    .registration-form button
+    {
+        font-size: 12px;
+    }
+    .menu_footer button
+    {
+        font-size: 10px;
+        width: 60%;
+    }
+    .menu_contact
+    {
+        font-size: 10px;
+        height: 50px;
+    }
+    .name_magazine
+    {
+        padding: 20px 0;
+    }
+    .number_magazin
+    {
+        padding: 20px 0;
     }
     .social img
     {
         width: 18px;
         height: 18px;
     }
+    .affilation
+    {
+        padding: 20px 0;
+    }
 }
 @media (max-width: 640px)
 {
-    .menu_footer button
+    .contacts
+    {
+        font-size: 11px;
+    }
+    .menu_wrapper button
+    {
+        font-size: 11px;
+        height: 40px;
+    }    
+    .map_wrapper button
+    {
+        font-size: 11px;
+        height: 40px;
+    }
+    .map_wrapper button:hover
+    {
+        font-size: 13px;
+    }
+    .tekst_wrapper h1
+    {
+        font-size: 23px;
+    }
+    .tekst_wrapper p
+    {
+        font-size: 10px;
+    }
+    .tekst_wrapper img
+    {
+        height: 100px;
+    }
+    .left_block h1
+    {
+        font-size: 29px;
+    }
+    .left_block p
+    {
+        font-size: 10px;
+    }
+    table .column1
+    {
+        font-size: 13px;
+    }
+    table .str1
+    {
+        font-size: 13px;
+    }
+    table .str2
+    {
+        font-size: 10px;
+    }
+    .left_block button
+    {
+        height: 30px;
+        font-size: 9px;
+    }
+    .decoration-row h1
+    {
+        font-size: 23px;
+    }
+    .registration-main p
+    {
+        font-size: 10px;
+    }
+    .registration-form input::placeholder
+    {
+        font-size: 10px;
+    }
+    .registration-form button
     {
         font-size: 12px;
-        padding: 25px 0;
     }
-    .menu_footer button:nth-child(6)
+    .menu_footer button
+    {
+        font-size: 9px;
+        padding: 28px 0;
+    }
+    .menu_contact
+    {
+        font-size: 9px;
+        height: 45px;
+    }
+    .name_magazine
+    {
+        padding: 18px 0;
+    }
+    .number_magazin
+    {
+        padding: 18px 0;
+    }
+    .social img
+    {
+        width: 15px;
+        height: 15px;
+    }
+    .affilation
     {
         padding: 18px 0;
     }
 }
-@media (max-width: 550px)
+@media (max-width: 580px)
 {
-    .main_wrapper p
+    .left_block button
     {
+        height: 26px;
         font-size: 8px;
     }
-    .main_wrapper h1
+}
+@media (max-width: 550px)
+{
+    .contacts
     {
-        font-size: 22px;
+        font-size: 9px;
+    }
+    .menu_wrapper button
+    {
+        font-size: 9px;
+        height: 30px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }    
+    .map_wrapper button
+    {
+        font-size: 9px;
+        height: 30px;
+    }
+    .map_wrapper button:hover
+    {
+        font-size: 11px;
+    }
+    .tekst_wrapper h1
+    {
+        font-size: 20px;
+    }
+    .tekst_wrapper p
+    {
+        font-size: 9px;
+    }
+    .tekst_wrapper img
+    {
+        height: 80px;
+    }
+    .left_block h1
+    {
+        font-size: 23px;
+    }
+    .left_block p
+    {
+        font-size: 9px;
     }
     table .column1
     {
-        font-size: 12px;
+        font-size: 11px;
     }
-    table .column2
+    table .str1
     {
-        font-size: 10px;
+        font-size: 11px;
     }
-    .main_wrapper button
+    table .str2
     {
-        font-size: 10px;
-        width: 200px;
-        padding: 10px 30px;
+        font-size: 9px;
+    }
+    .left_block button
+    {
+        height: 26px;
+        font-size: 8px;
     }
     .decoration-row h1
     {
-        font-size: 22px;
+        font-size: 19px;
     }
     .registration-main p
     {
+        font-size: 9px;
+    }
+    .registration-form input::placeholder
+    {
+        font-size: 9px;
+    }
+    .registration-form button
+    {
         font-size: 12px;
     }
-    .registration-form input
+    .menu_footer button
     {
-        width: 10px;
-        height: 30px;
-        margin: 2% 3%;
+        font-size: 8px;
+        padding: 28px 0;
     }
-    .registration-form .space
+    .menu_contact
     {
-        width: 90%;
+        font-size: 8px;
+        height: 35px;
     }
-    .registration-main button
+    .name_magazine
     {
-        width: 240px;
-        height: 40px;
-        font-size: 12px;
+        padding: 14px 0;
+    }
+    .number_magazin
+    {
+        padding: 14px 0;
+    }
+    .social img
+    {
+        width: 13px;
+        height: 13px;
+    }
+    .affilation
+    {
+        padding: 14px 0;
     }
 }

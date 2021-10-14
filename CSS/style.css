@@ -390,7 +390,7 @@ table .str2
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    padding-bottom: 550px;
+    margin-bottom: 550px;
     width: 1200px;
     max-width: 100%;
 }
